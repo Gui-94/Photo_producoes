@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel do Administrador</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .upload-block {
+      background: #ffffff15;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ffffff30;
+    }
+    .upload-block img {
+      max-width: 180px;
+      border-radius: 8px;
+      display: block;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<script>
+  if (localStorage.getItem("auth") !== "ok") {
+    window.location.href = "login.html";
+  }
+</script>
+
+<body class="admin-body">
+
+  <h1 class="admin-title">Painel do Administrador</h1>
+
+  <!-- HERO -->
+  <section class="admin-section">
+    <h2>Hero</h2>
+    <label>Título:</label>
+    <input id="admHeroTitle" type="text">
+
+    <label>Descrição:</label>
+    <input id="admHeroDesc" type="text">
+  </section>
+
+  <!-- SOBRE -->
+  <section class="admin-section">
+    <h2>Sobre</h2>
+    <label>Texto:</label>
+    <textarea id="admSobre"></textarea>
+  </section>
+
+  <!-- PORTFÓLIO COM UPLOAD -->
+  <section class="admin-section">
+    <h2>Portfólio — Imagens do dispositivo</h2>
+
+    <!-- BLOCO 1 -->
+    <div class="upload-block">
+      <label>Imagem 1:</label>
+      <input type="file" id="fileImg1" accept="image/*">
+      <img id="previewImg1" src="">
+    </div>
+
+    <!-- BLOCO 2 -->
+    <div class="upload-block">
+      <label>Imagem 2:</label>
+      <input type="file" id="fileImg2" accept="image/*">
+      <img id="previewImg2" src="">
+    </div>
+
+    <!-- BLOCO 3 -->
+    <div class="upload-block">
+      <label>Imagem 3:</label>
+      <input type="file" id="fileImg3" accept="image/*">
+      <img id="previewImg3" src="">
+    </div>
+
+    <!-- BLOCO 4 -->
+    <div class="upload-block">
+      <label>Imagem 4:</label>
+      <input type="file" id="fileImg4" accept="image/*">
+      <img id="previewImg4" src="">
+    </div>
+
+  </section>
+<button id="backHomeBtn" class="btn-voltar"> Voltar para Home</button>
+
+  <button class="btn-save" id="saveBtn">Salvar Alterações</button>
+
+  <script src="admin.js"></script>
+</body>
+</html>

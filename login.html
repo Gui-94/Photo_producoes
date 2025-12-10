@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Área do Fotógrafo — Login</title>
+
+  <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+  <a href="index.html" class="btn-voltar">← Voltar para o site</a>
+  
+  <div class="container">
+
+    <h2>Área do Fotógrafo 📸</h2>
+
+    <!-- LOGIN -->
+    <div id="loginBox">
+      <h3>Entrar</h3>
+      <input type="text" id="user" placeholder="Usuário">
+      <input type="password" id="pass" placeholder="Senha">
+      <button id="loginBtn">Entrar</button>
+
+      <div class="link-btn" id="goCreate">Criar nova conta</div>
+    </div>
+
+    <!-- CRIAR CONTA -->
+    <div id="createBox" class="hidden">
+      <h3>Criar conta</h3>
+      <input type="text" id="newUser" placeholder="Novo usuário">
+      <input type="password" id="newPass" placeholder="Nova senha">
+      <button id="createBtn">Salvar Conta</button>
+
+      <div class="link-btn" id="goLogin">Voltar ao login</div>
+    </div>
+
+    <p id="msg"></p>
+
+  </div>
+
+  <script src="login.js"></script>
+
+</body>
+</html>
