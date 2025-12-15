@@ -1,31 +1,38 @@
-/* RESET */
+/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
 body {
   font-family: "Poppins", sans-serif;
-  background: #eb0b0b54;
-  color: #333;
+  background: #080808;
+  color: goldenrod;
   line-height: 1.6;
 }
 
-/* NAVBAR */
+/* ================= NAVBAR ================= */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 25px 8%;
+  flex-wrap: wrap;
 }
 
 .logo {
-  font-size: 28px;
+  font-size: 40px;
   font-weight: 700;
 }
+
 .logo span {
-  color: #6c63ff;
+  color: goldenrod;
 }
 
 .menu {
@@ -33,20 +40,22 @@ body {
   display: flex;
   gap: 25px;
 }
+
 .menu a {
   text-decoration: none;
   color: #d12424;
   font-weight: 500;
   transition: 0.3s;
 }
+
 .menu a:hover {
-  color: #6c63ff;
+  color: #d12424;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 .hero {
-  background: linear-gradient(to bottom, #e5e5e5, #cfcfcf);
-  height: 29h;
+  background: linear-gradient(to bottom, #080808, #ada465c9);
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -55,53 +64,57 @@ body {
 }
 
 .hero-text h2 {
-  font-size: 48px;
+  font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 700;
 }
+
 .hero-text p {
   margin-top: 15px;
-  font-size: 20px;
+  font-size: clamp(1rem, 3vw, 1.25rem);
 }
 
 .btn {
   display: inline-block;
   margin-top: 25px;
   padding: 14px 32px;
-  background: #6c63ff;
-  color: white;
+  background: #0f0f0f;
+  color: goldenrod;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
   transition: 0.3s;
 }
+
 .btn:hover {
-  background: #4c48cc;
+  background: #d12424;
 }
 
-/* SEÇÕES */
+/* ================= SEÇÕES ================= */
 section {
   padding: 60px 8%;
   text-align: center;
 }
 
-/* PORTFÓLIO */
+/* ================= PORTFÓLIO ================= */
 .grid {
   margin-top: 40px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 25px;
 }
+
 .grid img {
   width: 100%;
   border-radius: 12px;
   box-shadow: 0px 4px 20px #00000020;
   transition: 0.3s;
 }
+
 .grid img:hover {
   transform: scale(1.03);
 }
 
-/* FORMULÁRIO */
+/* ================= FORMULÁRIO ================= */
 form {
   max-width: 500px;
   margin: 0 auto;
@@ -110,7 +123,8 @@ form {
   gap: 15px;
 }
 
-input, textarea {
+input,
+textarea {
   padding: 14px;
   border: 2px solid #ccc;
   border-radius: 8px;
@@ -120,18 +134,19 @@ input, textarea {
 button {
   padding: 14px;
   border: none;
-  background: #6c63ff;
+  background: #d12424;
   color: white;
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
   transition: 0.3s;
 }
+
 button:hover {
-  background: #524ddc;
+  background: #d12424;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 footer {
   padding: 25px;
   text-align: center;
@@ -139,8 +154,7 @@ footer {
   margin-top: 40px;
 }
 
-
-/* --- ÁREA ADMIN --- */
+/* ================= ÁREA ADMIN ================= */
 .admin-body {
   padding: 40px;
   background: #f1f1f1;
@@ -161,7 +175,7 @@ footer {
 
 .admin-section h2 {
   margin-bottom: 15px;
-  color: #6c63ff;
+  color: #d12424;
 }
 
 .admin-section label {
@@ -184,30 +198,42 @@ footer {
   width: 100%;
   padding: 15px;
   font-size: 18px;
-  background: #6c63ff;
+  background: #0a0a0a;
   color: white;
   border: none;
   border-radius: 10px;
   cursor: pointer;
 }
+
 .btn-save:hover {
-  background: #554fd6;
+  background: #d12424;
 }
 
 .btn-admin {
-  background: #333;
+  background: #1d1c1c;
   color: #fff;
-  padding: 10px 18px;
+  padding: 0px 0px;
   border-radius: 6px;
   font-weight: bold;
   text-decoration: none;
-  transition: .2s;
+  transition: 0.2s;
+}
+
+.btn-sup {
+  background: #0e0d0d;
+  color: #fff;
+  padding: 0px 0px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.2s;
 }
 
 .btn-admin:hover {
   background: #000;
 }
 
+/* ================= REDES SOCIAIS ================= */
 .social-links {
   display: flex;
   justify-content: center;
@@ -235,7 +261,31 @@ footer {
   box-shadow: 0 6px 20px #00000030;
 }
 
-/* Cores */
 .insta { background: linear-gradient(45deg, #ff7a52, #e1306c); }
 .face  { background: #1877f2; }
 .whats { background: #25d366; }
+
+/* ================= MEDIA QUERIES ================= */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
